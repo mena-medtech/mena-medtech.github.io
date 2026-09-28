@@ -38,10 +38,42 @@ body {
     padding: 0 20px;
 }
 
+/* ========== Language Switcher ========== */
+.language-switcher {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 2000;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background-color: var(--accent-color);
+}
+
+.lang-btn.active {
+    background-color: var(--accent-color);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ========== Navigation Bar ========== */
 .navbar {
     background-color: var(--primary-color);
     color: white;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -54,8 +86,37 @@ body {
     align-items: center;
 }
 
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+    animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
 .nav-brand h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 700;
     letter-spacing: 0.5px;
 }
@@ -80,6 +141,7 @@ body {
     transform: translateY(-2px);
 }
 
+/* ========== Hero Section ========== */
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
@@ -135,6 +197,8 @@ body {
     font-weight: 600;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    cursor: pointer;
+    border: none;
 }
 
 .cta-button:hover {
@@ -143,6 +207,7 @@ body {
     box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
 }
 
+/* ========== About Section ========== */
 .about {
     padding: 100px 20px;
     background-color: var(--light-bg);
@@ -153,7 +218,8 @@ body {
 .expertise h2,
 .portfolio h2,
 .regional h2,
-.contact h2 {
+.contact h2,
+.pricing h2 {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
@@ -167,7 +233,8 @@ body {
 .expertise h2::after,
 .portfolio h2::after,
 .regional h2::after,
-.contact h2::after {
+.contact h2::after,
+.pricing h2::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -225,6 +292,7 @@ body {
     font-weight: 500;
 }
 
+/* ========== Services Section ========== */
 .services {
     padding: 100px 20px;
     background-color: white;
@@ -244,12 +312,29 @@ body {
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
     border-top: 4px solid var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: var(--accent-color);
+    transition: left 0.3s ease;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-lg);
     border-top-color: var(--accent-color);
+}
+
+.service-card:hover::before {
+    left: 0;
 }
 
 .service-card i {
@@ -275,6 +360,277 @@ body {
     font-size: 0.95rem;
 }
 
+/* ========== Scope Section ========== */
+.scope {
+    padding: 100px 20px;
+    background-color: var(--light-bg);
+}
+
+.scope-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.scope-item {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.scope-item:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.scope-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.scope-item i {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+}
+
+.scope-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.scope-item li {
+    padding: 0.75rem 0 0.75rem 1.5rem;
+    color: var(--gray-text);
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.scope-item li:last-child {
+    border-bottom: none;
+}
+
+.scope-item li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* ========== Pricing Section ========== */
+.pricing {
+    padding: 100px 20px;
+    background-color: white;
+}
+
+.pricing-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.pricing-tab-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    border: 2px solid var(--border-color);
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.pricing-tab-btn:hover {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.pricing-tab-btn.active {
+    background-color: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.pricing-grid {
+    position: relative;
+}
+
+.pricing-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.pricing-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.pricing-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--secondary-color);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-top-color: var(--accent-color);
+}
+
+.pricing-card h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.currency {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.amount {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.pricing-card p {
+    color: var(--gray-text);
+    font-size: 0.9rem;
+}
+
+.price-subtitle {
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* ========== Consulting Services ========== */
+.consulting {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, rgba(0, 61, 130, 0.05) 0%, rgba(0, 102, 204, 0.05) 100%);
+}
+
+.consulting h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.consulting-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--gray-text);
+    line-height: 1.8;
+}
+
+.consulting-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.consulting-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border-left: 5px solid var(--secondary-color);
+}
+
+.consulting-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-left-color: var(--accent-color);
+}
+
+.consulting-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.consulting-card i {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+}
+
+.consulting-card p {
+    color: var(--gray-text);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.consulting-price {
+    background-color: var(--light-bg);
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.consulting-price h4 {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-price-sar,
+.service-price-usd {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+/* ========== Expertise Section ========== */
 .expertise {
     padding: 100px 20px;
     background-color: var(--light-bg);
@@ -330,6 +686,7 @@ body {
     font-size: 1.2rem;
 }
 
+/* ========== Portfolio Section ========== */
 .portfolio {
     padding: 100px 20px;
     background-color: white;
@@ -390,6 +747,7 @@ body {
     line-height: 1.7;
 }
 
+/* ========== Regional Section ========== */
 .regional {
     padding: 100px 20px;
     background: linear-gradient(135deg, rgba(0, 61, 130, 0.05) 0%, rgba(0, 102, 204, 0.05) 100%);
@@ -427,6 +785,7 @@ body {
     font-size: 0.95rem;
 }
 
+/* ========== Contact Section ========== */
 .contact {
     padding: 100px 20px;
     background-color: var(--light-bg);
@@ -525,6 +884,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 61, 130, 0.2);
 }
 
+/* ========== Footer ========== */
 .footer {
     background-color: var(--primary-color);
     color: white;
@@ -548,6 +908,7 @@ body {
     opacity: 0.8;
 }
 
+/* ========== Animations ========== */
 @keyframes slideInDown {
     from {
         opacity: 0;
@@ -570,14 +931,24 @@ body {
     }
 }
 
+/* ========== Responsive Design ========== */
 @media (max-width: 768px) {
+    .language-switcher {
+        top: 5px;
+        right: 10px;
+    }
+
     .nav-menu {
         gap: 1rem;
         font-size: 0.9rem;
     }
 
     .nav-brand h1 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+    }
+
+    .logo-image {
+        height: 40px;
     }
 
     .hero {
@@ -599,18 +970,56 @@ body {
 
     .about-stats,
     .services-grid,
+    .scope-grid,
+    .consulting-grid,
     .expertise-grid,
     .portfolio-grid,
-    .regional-content {
+    .regional-content,
+    .pricing-cards {
         grid-template-columns: 1fr;
     }
     
     .about h2,
     .services h2,
+    .scope h2,
+    .consulting h2,
     .expertise h2,
     .portfolio h2,
     .regional h2,
-    .contact h2 {
+    .contact h2,
+    .pricing h2 {
         font-size: 2rem;
+    }
+
+    .pricing-tabs {
+        gap: 0.5rem;
+    }
+
+    .pricing-tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        gap: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .nav-brand h1 {
+        font-size: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .pricing-tabs {
+        flex-direction: column;
+    }
+
+    .pricing-tab-btn {
+        width: 100%;
     }
 }
