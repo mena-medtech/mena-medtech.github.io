@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MENA MedTech - Professional Services Presentation">
+    <title>MENA MedTech - Professional Services Presentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @media print {
+            .slide {
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+            body {
+                background: white;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .presentation-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .slide {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide.title-slide {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .slide.section-slide {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .slide.accent-slide {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .slide h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .slide h2 {
+            font-size: 2.8em;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .slide h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .slide p {
+            font-size: 1.3em;
+            line-height: 1.6;
+            max-width: 900px;
+            color: #333;
+        }
+
+        .title-slide p, .section-slide p, .accent-slide p {
+            color: white;
+            opacity: 0.95;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .title-slide .logo {
+            background: white;
+            color: #667eea;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-box h3 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .stat-box p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .content-item {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid #667eea;
+        }
+
+        .content-item h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .content-item ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .content-item li {
+            padding: 8px 0;
+            font-size: 0.95em;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+
+        .content-item li:before {
+            content: "✓";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .service-card h4 {
+            color: #333;
+            font-size: 1em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .consulting-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .consulting-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .consulting-card i {
+            font-size: 2em;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .consulting-card h4 {
+            color: #333;
+            font-size: 1em;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .consulting-card p {
+            font-size: 0.85em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .pricing-box {
+            display: inline-block;
+            background: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-box h4 {
+            color: #667eea;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .pricing-amount {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #f5576c;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            width: 100%;
+            align-items: center;
+        }
+
+        .feature-list {
+            text-align: left;
+        }
+
+        .feature-list li {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-list li:before {
+            content: "→";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 1.3em;
+        }
+
+        .contact-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .contact-item {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            font-size: 1.2em;
+        }
+
+        .contact-item i {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-right: 20px;
+            min-width: 30px;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            background: #667eea;
+            color: white;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: #764ba2;
+            transform: scale(1.05);
+        }
+
+        .btn-print {
+            background: #f5576c;
+        }
+
+        .btn-print:hover {
+            background: #e83e4d;
+        }
+
+        .slide-counter {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #667eea;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .highlight {
+            color: #f5576c;
+            font-weight: 700;
+        }
+
+        @media (max-width: 1200px) {
+            .slide {
+                padding: 40px;
+            }
+
+            .slide h1 {
+                font-size: 2.5em;
+            }
+
+            .slide h2 {
+                font-size: 2em;
+            }
+
+            .services-grid, .consulting-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide 1: Title -->
+        <div class="slide title-slide">
+            <div class="logo">MM</div>
+            <h1>MENA MedTech</h1>
+            <p class="subtitle">Medical Device Engineering & Regulatory Expertise</p>
+            <p style="font-size: 1.1em; margin-top: 20px;">Professional Solutions for Medical Device Development</p>
+        </div>
+
+        <!-- Slide 2: About -->
+        <div class="slide">
+            <h2>About MENA MedTech</h2>
+            <p style="margin-bottom: 40px;">15 Years of Excellence in Medical Device Engineering & Regulatory Compliance</p>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3>15+</h3>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="stat-box">
+                    <h3>100+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-box">
+                    <h3>50+</h3>
+                    <p>Devices Commercialized</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Our Expertise -->
+        <div class="slide">
+            <h2>Our Expertise Areas</h2>
+            <div class="content-grid">
+                <div class="content-item">
+                    <h3><i class="fas fa-microchip"></i> Electromechanical Devices</h3>
+                    <ul>
+                        <li>Motor & actuator integration</li>
+                        <li>Control systems design</li>
+                        <li>Electronic component selection</li>
+                        <li>Prototype development</li>
+                    </ul>
+                </div>
+                <div class="content-item">
+                    <h3><i class="fas fa-pills"></i> Combination Products</h3>
+                    <ul>
+                        <li>Drug-device strategy</li>
+                        <li>Dual regulatory pathways</li>
+                        <li>Interaction studies</li>
+                        <li>Coordinated commercialization</li>
+                    </ul>
+                </div>
+                <div class="content-item">
+                    <h3><i class="fas fa-clipboard-check"></i> Regulatory Strategy</h3>
+                    <ul>
+                        <li>FDA pathway selection</li>
+                        <li>CE Mark compliance</li>
+                        <li>Regional requirements</li>
+                        <li>Market entry strategy</li>
+                    </ul>
+                </div>
+                <div class="content-item">
+                    <h3><i class="fas fa-globe"></i> Regional Markets</h3>
+                    <ul>
+                        <li>Gulf Region expertise</li>
+                        <li>US FDA experience</li>
+                        <li>European CE Mark</li>
+                        <li>Lebanon & MENA focus</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Core Services -->
+        <div class="slide section-slide">
+            <h2>Core Engineering & Quality Services</h2>
+            <p style="margin-bottom: 30px; font-size: 1.1em;">End-to-End Solution Coverage</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-file-contract"></i>
+                    <h4>Project Charter</h4>
+                    <p>Scope, objectives & governance</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-drafting-compass"></i>
+                    <h4>Design & Dev Plan</h4>
+                    <p>Comprehensive development planning</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-list-check"></i>
+                    <h4>Design Control</h4>
+                    <p>Regulatory-compliant implementation</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-flask"></i>
+                    <h4>R&D Engineering</h4>
+                    <p>Research & innovation solutions</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-industry"></i>
+                    <h4>Manufacturing Eng</h4>
+                    <p>Process optimization & scale-up</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-check-double"></i>
+                    <h4>Quality Engineering</h4>
+                    <p>QA & lifecycle compliance</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h4>Design Transfer</h4>
+                    <p>Dev to manufacturing transition</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-microscope"></i>
+                    <h4>Post-Market Surveillance</h4>
+                    <p>Ongoing monitoring & reporting</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-book"></i>
+                    <h4>Technical File</h4>
+                    <p>Regulatory documentation</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Consulting Services -->
+        <div class="slide">
+            <h2>Consulting & Project Management</h2>
+            <p style="margin-bottom: 30px;">Strategic guidance from concept to commercialization</p>
+            <div class="consulting-cards">
+                <div class="consulting-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h4>Project Management</h4>
+                    <p>Planning, scheduling, resource allocation, risk management, milestone tracking</p>
+                </div>
+                <div class="consulting-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Strategic Planning</h4>
+                    <p>Concept evaluation, market assessment, feasibility analysis, roadmap creation</p>
+                </div>
+                <div class="consulting-card">
+                    <i class="fas fa-gavel"></i>
+                    <h4>Regulatory & Compliance</h4>
+                    <p>Pathway selection, FDA/CE strategy, compliance planning, submission prep</p>
+                </div>
+                <div class="consulting-card">
+                    <i class="fas fa-cogs"></i>
+                    <h4>Technical & Manufacturing</h4>
+                    <p>Design optimization, process planning, supplier management, scale-up strategy</p>
+                </div>
+                <div class="consulting-card">
+                    <i class="fas fa-pills"></i>
+                    <h4>Combination Products</h4>
+                    <p>Drug-device strategy, dual pathways, interaction studies, commercialization</p>
+                </div>
+                <div class="consulting-card">
+                    <i class="fas fa-globe"></i>
+                    <h4>Market Entry & Expansion</h4>
+                    <p>Market analysis, regional requirements, business strategy, launch planning</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Service Pricing - Gulf Region -->
+        <div class="slide accent-slide">
+            <h2>Service Pricing - Gulf Region (SAR)</h2>
+            <div class="services-grid">
+                <div class="service-card" style="background: rgba(255,255,255,0.95);">
+                    <h4 style="color: #667eea;">Project Charter</h4>
+                    <div class="pricing-amount" style="color: #f5576c;">45,000</div>
+                    <p style="color: #666;">Scope & governance</p>
+                </div>
+                <div class="service-card" style="background: rgba(255,255,255,0.95);">
+                    <h4 style="color: #667eea;">Design & Dev Plan</h4>
+                    <div class="pricing-amount" style="color: #f5576c;">75,000</div>
+                    <p style="color: #666;">Complete planning</p>
+                </div>
+                <div class="service-card" style="background: rgba(255,255,255,0.95);">
+                    <h4 style="color: #667eea;">Design Control</h4>
+                    <div class="pricing-amount" style="color: #f5576c;">150,000</div>
+                    <p style="color: #666;">Full implementation</p>
+                </div>
+                <div class="service-card" style="background: rgba(255,255,255,0.95);">
+                    <h4 style="color: #667eea;">R&D Engineering</h4>
+                    <div class="pricing-amount" style="color: #f5576c;">250,000</div>
+                    <p style="color: #666;">Research & innovation</p>
+                </div>
+                <div class="service-card" style="background: rgba(255,255,255,0.95);">
+                    <h4 style="color: #667eea;">Manufacturing Eng</h4>
+                    <div class="pricing-amount" style="color: #f5576c;">200,000</div>
+                    <p style="color: #666;">Process optimization</p>
+                </div>
+                <div class="service-card" style="background: rgba(255,255,255,0.95);">
+                    <h4 style="color: #667eea;">Quality Engineering</h4>
+                    <div class="pricing-amount" style="color: #f5576c;">120,000</div>
+                    <p style="color: #666;">QA & compliance</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Consulting Pricing -->
+        <div class="slide">
+            <h2>Consulting Services Pricing</h2>
+            <p style="margin-bottom: 30px; font-size: 1.1em;">Monthly Consulting Rates</p>
+            <div class="consulting-cards">
+                <div class="consulting-card">
+                    <h4 style="color: #667eea; font-size: 1.1em;">Project Management</h4>
+                    <p><strong>Gulf:</strong> SAR 25,000 - 40,000</p>
+                    <p><strong>US:</strong> USD 7,000 - 11,000</p>
+                </div>
+                <div class="consulting-card">
+                    <h4 style="color: #667eea; font-size: 1.1em;">Strategic Planning</h4>
+                    <p><strong>Gulf:</strong> SAR 30,000 - 50,000</p>
+                    <p><strong>US:</strong> USD 8,500 - 14,000</p>
+                </div>
+                <div class="consulting-card">
+                    <h4 style="color: #667eea; font-size: 1.1em;">Regulatory & Compliance</h4>
+                    <p><strong>Gulf:</strong> SAR 35,000 - 55,000</p>
+                    <p><strong>US:</strong> USD 10,000 - 16,000</p>
+                </div>
+                <div class="consulting-card">
+                    <h4 style="color: #667eea; font-size: 1.1em;">Combination Products</h4>
+                    <p><strong>Gulf:</strong> SAR 40,000 - 60,000</p>
+                    <p><strong>US:</strong> USD 12,000 - 18,000</p>
+                </div>
+            </div>
+            <p style="margin-top: 40px; font-size: 1em; color: #666;"><em>Rates vary based on scope complexity and engagement duration. Custom packages available.</em></p>
+        </div>
+
+        <!-- Slide 8: Why Choose Us -->
+        <div class="slide">
+            <h2>Why Choose MENA MedTech?</h2>
+            <div class="two-column">
+                <ul class="feature-list">
+                    <li>15+ years proven track record</li>
+                    <li>50+ commercialized devices</li>
+                    <li>Multi-regional expertise</li>
+                    <li>FDA & CE Mark proficiency</li>
+                    <li>End-to-end solutions</li>
+                </ul>
+                <ul class="feature-list">
+                    <li>Combination product specialists</li>
+                    <li>Regulatory excellence</li>
+                    <li>Quality-focused approach</li>
+                    <li>Gulf region local expertise</li>
+                    <li>Timely market entry strategy</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 9: Our Process -->
+        <div class="slide section-slide">
+            <h2>Our Comprehensive Process</h2>
+            <div class="content-grid">
+                <div class="content-item" style="border-left-color: #f5576c;">
+                    <h3 style="color: white;"><i class="fas fa-1"></i> Discovery & Planning</h3>
+                    <ul style="color: rgba(255,255,255,0.9);">
+                        <li>Concept evaluation</li>
+                        <li>Market assessment</li>
+                        <li>Technical feasibility</li>
+                    </ul>
+                </div>
+                <div class="content-item" style="border-left-color: #f5576c;">
+                    <h3 style="color: white;"><i class="fas fa-2"></i> Development & Design</h3>
+                    <ul style="color: rgba(255,255,255,0.9);">
+                        <li>Design control</li>
+                        <li>Prototype development</li>
+                        <li>Testing & validation</li>
+                    </ul>
+                </div>
+                <div class="content-item" style="border-left-color: #f5576c;">
+                    <h3 style="color: white;"><i class="fas fa-3"></i> Manufacturing & Scale</h3>
+                    <ul style="color: rgba(255,255,255,0.9);">
+                        <li>Process optimization</li>
+                        <li>Design transfer</li>
+                        <li>Production scale-up</li>
+                    </ul>
+                </div>
+                <div class="content-item" style="border-left-color: #f5576c;">
+                    <h3 style="color: white;"><i class="fas fa-4"></i> Regulatory & Launch</h3>
+                    <ul style="color: rgba(255,255,255,0.9);">
+                        <li>Regulatory submission</li>
+                        <li>Compliance verification</li>
+                        <li>Market launch support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Contact -->
+        <div class="slide" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
+            <h2>Let's Work Together</h2>
+            <p style="margin-bottom: 40px;">Get in touch to discuss your medical device project</p>
+            <div class="contact-box" style="max-width: 600px; background: rgba(255,255,255,0.95);">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong style="color: #333;">WhatsApp</strong><br>
+                        <a href="https://wa.me/15084104492" style="color: #667eea; text-decoration: none;">+1 508 410 4492</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong style="color: #333;">Email</strong><br>
+                        <a href="mailto:services@mena-medtech.com" style="color: #667eea; text-decoration: none;">services@mena-medtech.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <div>
+                        <strong style="color: #333;">Website</strong><br>
+                        <a href="https://www.mena-medtech.com" style="color: #667eea; text-decoration: none;">www.mena-medtech.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: Thank You -->
+        <div class="slide title-slide" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <h1 style="font-size: 3em; margin-bottom: 30px;">Thank You</h1>
+            <p style="font-size: 1.4em; margin-bottom: 40px;">Your Partner in Medical Device Excellence</p>
+            <p style="font-size: 1.1em; opacity: 0.9;">&copy; 2024 MENA MedTech - Medical Device Engineering & Regulatory Expertise</p>
+        </div>
+    </div>
+
+    <div class="slide-counter"><span id="current">1</span> / <span id="total">11</span></div>
+    
+    <div class="controls">
+        <button class="btn" onclick="previousSlide()"><i class="fas fa-chevron-left"></i> Previous</button>
+        <button class="btn" onclick="nextSlide()"><i class="fas fa-chevron-right"></i> Next</button>
+        <button class="btn btn-print" onclick="window.print()"><i class="fas fa-download"></i> Download PDF</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            slides[currentSlide].style.display = 'none';
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].style.display = 'flex';
+            document.getElementById('current').textContent = currentSlide + 1;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function previousSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') previousSlide();
+        });
+
+        // Initialize
+        showSlide(0);
+        document.getElementById('total').textContent = totalSlides;
+    </script>
+</body>
+</html>
