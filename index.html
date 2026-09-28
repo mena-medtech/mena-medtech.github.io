@@ -8,18 +8,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="en">English</button>
+        <button class="lang-btn" data-lang="ar">العربية</button>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <h1>MENA MedTech</h1>
+                <div class="logo-container">
+                    <img src="assets/logo.png" alt="MENA MedTech Logo" class="logo-image">
+                    <h1>MENA MedTech</h1>
+                </div>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li><a href="#services" data-en="Services" data-ar="الخدمات">Services</a></li>
+                <li><a href="#pricing" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
+                <li><a href="#expertise" data-en="Expertise" data-ar="الخبرة">Expertise</a></li>
+                <li><a href="#portfolio" data-en="Portfolio" data-ar="المشاريع">Portfolio</a></li>
+                <li><a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -27,34 +37,34 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h2>Medical Device Excellence</h2>
-            <p>15 Years of Engineering Innovation & Regulatory Expertise</p>
-            <p class="subtitle">Serving the Gulf Region and Lebanon</p>
-            <a href="#contact" class="cta-button">Get in Touch</a>
+            <h2 data-en="Medical Device Excellence" data-ar="التميز في الأجهزة الطبية">Medical Device Excellence</h2>
+            <p data-en="15 Years of Engineering Innovation & Regulatory Expertise" data-ar="15 سنة من الابتكار الهندسي والخبرة التنظيمية">15 Years of Engineering Innovation & Regulatory Expertise</p>
+            <p class="subtitle" data-en="Serving the Gulf Region, Lebanon, US and Europe" data-ar="خدمة منطقة الخليج ولبنان والولايات المتحدة وأوروبا">Serving the Gulf Region, Lebanon, US and Europe</p>
+            <a href="#contact" class="cta-button" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</a>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About MENA MedTech</h2>
+            <h2 data-en="About MENA MedTech" data-ar="عن شركة MENA MedTech">About MENA MedTech</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>With 15 years of proven expertise in medical device engineering and regulatory compliance, MENA MedTech delivers comprehensive solutions for the development and commercialization of medical devices across the Gulf region and Lebanon.</p>
-                    <p>Our team combines deep technical knowledge with regulatory excellence, ensuring your products meet the highest quality and safety standards.</p>
+                    <p data-en="With 15 years of proven expertise in medical device engineering and regulatory compliance, MENA MedTech delivers comprehensive solutions for the development and commercialization of medical devices across multiple markets." data-ar="مع 15 سنة من الخبرة المثبتة في الهندسة الطبية والامتثال التنظيمي، توفر MENA MedTech حلولاً شاملة لتطوير وتسويق الأجهزة الطبية عبر أسواق متعددة.">With 15 years of proven expertise in medical device engineering and regulatory compliance, MENA MedTech delivers comprehensive solutions for the development and commercialization of medical devices across multiple markets.</p>
+                    <p data-en="Our team combines deep technical knowledge with regulatory excellence, ensuring your products meet the highest quality and safety standards." data-ar="يجمع فريقنا بين المعرفة التقنية العميقة والتميز التنظيمي، مما يضمن أن منتجاتك تلبي أعلى معايير الجودة والسلامة.">Our team combines deep technical knowledge with regulatory excellence, ensuring your products meet the highest quality and safety standards.</p>
                 </div>
                 <div class="about-stats">
                     <div class="stat">
                         <h3>15+</h3>
-                        <p>Years Experience</p>
+                        <p data-en="Years Experience" data-ar="سنة خبرة">Years Experience</p>
                     </div>
                     <div class="stat">
                         <h3>100+</h3>
-                        <p>Projects Completed</p>
+                        <p data-en="Projects Completed" data-ar="مشروع مكتمل">Projects Completed</p>
                     </div>
                     <div class="stat">
                         <h3>50+</h3>
-                        <p>Devices Commercialized</p>
+                        <p data-en="Devices Commercialized" data-ar="جهاز تم تسويقه">Devices Commercialized</p>
                     </div>
                 </div>
             </div>
@@ -64,67 +74,374 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2>Our Services</h2>
+            <h2 data-en="Our Services" data-ar="خدماتنا">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
+                    <img src="assets/service-1.jpg" alt="Project Charter">
                     <i class="fas fa-file-contract"></i>
-                    <h3>Project Charter</h3>
-                    <p>Define project scope, objectives, and governance framework</p>
+                    <h3 data-en="Project Charter" data-ar="ميثاق المشروع">Project Charter</h3>
+                    <p data-en="Define project scope, objectives, and governance framework" data-ar="تحديد نطاق المشروع والأهداف والإطار الحاكم">Define project scope, objectives, and governance framework</p>
                 </div>
                 <div class="service-card">
+                    <img src="assets/service-2.jpg" alt="Design & Development">
                     <i class="fas fa-drafting-compass"></i>
-                    <h3>Design & Development Plan</h3>
-                    <p>Comprehensive planning for device development phases</p>
+                    <h3 data-en="Design & Development Plan" data-ar="خطة التصميم والتطوير">Design & Development Plan</h3>
+                    <p data-en="Comprehensive planning for device development phases" data-ar="التخطيط الشامل لمراحل تطوير الأجهزة">Comprehensive planning for device development phases</p>
                 </div>
                 <div class="service-card">
+                    <img src="assets/service-3.jpg" alt="Design Control">
                     <i class="fas fa-list-check"></i>
-                    <h3>Design Control Phases</h3>
-                    <p>Complete design control implementation per regulatory requirements</p>
+                    <h3 data-en="Design Control Phases" data-ar="مراحل التحكم في التصميم">Design Control Phases</h3>
+                    <p data-en="Complete design control implementation per regulatory requirements" data-ar="تنفيذ التحكم الكامل في التصميم وفقاً للمتطلبات التنظيمية">Complete design control implementation per regulatory requirements</p>
                 </div>
                 <div class="service-card">
+                    <img src="assets/service-4.jpg" alt="R&D Engineering">
                     <i class="fas fa-flask"></i>
-                    <h3>R&D Engineering</h3>
-                    <p>Research and development for innovative medical solutions</p>
+                    <h3 data-en="R&D Engineering" data-ar="هندسة البحث والتطوير">R&D Engineering</h3>
+                    <p data-en="Research and development for innovative medical solutions" data-ar="البحث والتطوير للحلول الطبية المبتكرة">Research and development for innovative medical solutions</p>
                 </div>
                 <div class="service-card">
+                    <img src="assets/service-5.jpg" alt="Manufacturing">
                     <i class="fas fa-industry"></i>
-                    <h3>Manufacturing Engineering</h3>
-                    <p>Process optimization and production scale-up</p>
+                    <h3 data-en="Manufacturing Engineering" data-ar="هندسة التصنيع">Manufacturing Engineering</h3>
+                    <p data-en="Process optimization and production scale-up" data-ar="تحسين العمليات والتوسع في الإنتاج">Process optimization and production scale-up</p>
                 </div>
                 <div class="service-card">
+                    <img src="assets/service-6.jpg" alt="Quality Engineering">
                     <i class="fas fa-check-double"></i>
-                    <h3>Quality Engineering</h3>
-                    <p>Quality assurance and compliance throughout product lifecycle</p>
+                    <h3 data-en="Quality Engineering" data-ar="هندسة الجودة">Quality Engineering</h3>
+                    <p data-en="Quality assurance and compliance throughout product lifecycle" data-ar="ضمان الجودة والامتثال طوال دورة حياة المنتج">Quality assurance and compliance throughout product lifecycle</p>
                 </div>
                 <div class="service-card">
+                    <img src="assets/service-7.jpg" alt="Design Transfer">
                     <i class="fas fa-exchange-alt"></i>
-                    <h3>Design Transfer</h3>
-                    <p>Seamless transition from development to manufacturing</p>
+                    <h3 data-en="Design Transfer" data-ar="نقل التصميم">Design Transfer</h3>
+                    <p data-en="Seamless transition from development to manufacturing" data-ar="انتقال سلس من التطوير إلى التصنيع">Seamless transition from development to manufacturing</p>
                 </div>
                 <div class="service-card">
+                    <img src="assets/service-8.jpg" alt="Post-Market Surveillance">
                     <i class="fas fa-microscope"></i>
-                    <h3>Post-Market Surveillance</h3>
-                    <p>Ongoing monitoring and adverse event management</p>
+                    <h3 data-en="Post-Market Surveillance" data-ar="المراقبة بعد التسويق">Post-Market Surveillance</h3>
+                    <p data-en="Ongoing monitoring and adverse event management" data-ar="المراقبة المستمرة وإدارة الأحداث الضارة">Ongoing monitoring and adverse event management</p>
                 </div>
                 <div class="service-card">
+                    <img src="assets/service-9.jpg" alt="Risk Management">
                     <i class="fas fa-exclamation-triangle"></i>
-                    <h3>Risk Management Files</h3>
-                    <p>Comprehensive risk analysis and mitigation strategies</p>
+                    <h3 data-en="Risk Management Files" data-ar="ملفات إدارة المخاطر">Risk Management Files</h3>
+                    <p data-en="Comprehensive risk analysis and mitigation strategies" data-ar="تحليل شامل للمخاطر واستراتيجيات التخفيف">Comprehensive risk analysis and mitigation strategies</p>
                 </div>
                 <div class="service-card">
+                    <img src="assets/service-10.jpg" alt="Technical File">
                     <i class="fas fa-book"></i>
-                    <h3>Technical File & Regulatory Registration</h3>
-                    <p>Complete technical documentation for regulatory submissions</p>
+                    <h3 data-en="Technical File & Regulatory Registration" data-ar="الملف التقني والتسجيل التنظيمي">Technical File & Regulatory Registration</h3>
+                    <p data-en="Complete technical documentation for regulatory submissions" data-ar="التوثيق التقني الكامل للتقديمات التنظيمية">Complete technical documentation for regulatory submissions</p>
                 </div>
                 <div class="service-card">
+                    <img src="assets/service-11.jpg" alt="CAPA Management">
                     <i class="fas fa-wrench"></i>
-                    <h3>CAPA & NCR Management</h3>
-                    <p>Corrective and preventive action systems</p>
+                    <h3 data-en="CAPA & NCR Management" data-ar="إدارة CAPA و NCR">CAPA & NCR Management</h3>
+                    <p data-en="Corrective and preventive action systems" data-ar="أنظمة الإجراءات التصحيحية والوقائية">Corrective and preventive action systems</p>
                 </div>
                 <div class="service-card">
+                    <img src="assets/service-12.jpg" alt="Clinical Studies">
                     <i class="fas fa-chart-bar"></i>
-                    <h3>Feasibility & Summative Studies</h3>
-                    <p>Clinical and usability studies for product validation</p>
+                    <h3 data-en="Feasibility & Summative Studies" data-ar="دراسات الجدوى والدراسات الشاملة">Feasibility & Summative Studies</h3>
+                    <p data-en="Clinical and usability studies for product validation" data-ar="الدراسات السريرية ودراسات سهولة الاستخدام">Clinical and usability studies for product validation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 data-en="Service Pricing by Region" data-ar="أسعار الخدمات حسب المنطقة">Service Pricing by Region</h2>
+            <div class="pricing-tabs">
+                <button class="pricing-tab-btn active" data-region="gulf" data-en="Gulf Region" data-ar="منطقة الخليج">Gulf Region</button>
+                <button class="pricing-tab-btn" data-region="lebanon" data-en="Lebanon" data-ar="لبنان">Lebanon</button>
+                <button class="pricing-tab-btn" data-region="us" data-en="United States" data-ar="الولايات المتحدة">United States</button>
+                <button class="pricing-tab-btn" data-region="europe" data-en="Europe" data-ar="أوروبا">Europe</button>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Gulf Region Pricing -->
+                <div class="pricing-content active" data-region="gulf">
+                    <div class="pricing-cards">
+                        <div class="pricing-card">
+                            <h3 data-en="Project Charter" data-ar="ميثاق المشروع">Project Charter</h3>
+                            <div class="price">
+                                <span class="currency">SAR</span>
+                                <span class="amount">45,000</span>
+                            </div>
+                            <p data-en="Scope definition & governance" data-ar="تعريف النطاق والحوكمة">Scope definition & governance</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Design & Dev Plan" data-ar="خطة التصميم والتطوير">Design & Dev Plan</h3>
+                            <div class="price">
+                                <span class="currency">SAR</span>
+                                <span class="amount">75,000</span>
+                            </div>
+                            <p data-en="Complete development planning" data-ar="التخطيط الشامل للتطوير">Complete development planning</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Design Control" data-ar="التحكم في التصميم">Design Control</h3>
+                            <div class="price">
+                                <span class="currency">SAR</span>
+                                <span class="amount">150,000</span>
+                            </div>
+                            <p data-en="Full implementation phases" data-ar="تنفيذ المراحل الكاملة">Full implementation phases</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="R&D Engineering" data-ar="هندسة البحث والتطوير">R&D Engineering</h3>
+                            <div class="price">
+                                <span class="currency">SAR</span>
+                                <span class="amount">250,000</span>
+                            </div>
+                            <p data-en="Research & innovation" data-ar="البحث والابتكار">Research & innovation</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Manufacturing Eng" data-ar="هندسة التصنيع">Manufacturing Eng</h3>
+                            <div class="price">
+                                <span class="currency">SAR</span>
+                                <span class="amount">200,000</span>
+                            </div>
+                            <p data-en="Process optimization" data-ar="تحسين العملية">Process optimization</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Quality Eng" data-ar="هندسة الجودة">Quality Eng</h3>
+                            <div class="price">
+                                <span class="currency">SAR</span>
+                                <span class="amount">120,000</span>
+                            </div>
+                            <p data-en="QA & compliance" data-ar="ضمان الجودة والامتثال">QA & compliance</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Design Transfer" data-ar="نقل التصميم">Design Transfer</h3>
+                            <div class="price">
+                                <span class="currency">SAR</span>
+                                <span class="amount">180,000</span>
+                            </div>
+                            <p data-en="Dev to manufacturing" data-ar="من التطوير إلى التصنيع">Dev to manufacturing</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Technical File" data-ar="الملف التقني">Technical File</h3>
+                            <div class="price">
+                                <span class="currency">SAR</span>
+                                <span class="amount">160,000</span>
+                            </div>
+                            <p data-en="Regulatory submissions" data-ar="التقديمات التنظيمية">Regulatory submissions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lebanon Pricing -->
+                <div class="pricing-content" data-region="lebanon">
+                    <div class="pricing-cards">
+                        <div class="pricing-card">
+                            <h3 data-en="Project Charter" data-ar="ميثاق المشروع">Project Charter</h3>
+                            <div class="price">
+                                <span class="currency">LBP</span>
+                                <span class="amount">67,500,000</span>
+                            </div>
+                            <p data-en="Scope definition & governance" data-ar="تعريف النطاق والحوكمة">Scope definition & governance</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Design & Dev Plan" data-ar="خطة التصميم والتطوير">Design & Dev Plan</h3>
+                            <div class="price">
+                                <span class="currency">LBP</span>
+                                <span class="amount">112,500,000</span>
+                            </div>
+                            <p data-en="Complete development planning" data-ar="التخطيط الشامل للتطوير">Complete development planning</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Design Control" data-ar="التحكم في التصميم">Design Control</h3>
+                            <div class="price">
+                                <span class="currency">LBP</span>
+                                <span class="amount">225,000,000</span>
+                            </div>
+                            <p data-en="Full implementation phases" data-ar="تنفيذ المراحل الكاملة">Full implementation phases</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="R&D Engineering" data-ar="هندسة البحث والتطوير">R&D Engineering</h3>
+                            <div class="price">
+                                <span class="currency">LBP</span>
+                                <span class="amount">375,000,000</span>
+                            </div>
+                            <p data-en="Research & innovation" data-ar="البحث والابتكار">Research & innovation</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Manufacturing Eng" data-ar="هندسة التصنيع">Manufacturing Eng</h3>
+                            <div class="price">
+                                <span class="currency">LBP</span>
+                                <span class="amount">300,000,000</span>
+                            </div>
+                            <p data-en="Process optimization" data-ar="تحسين العملية">Process optimization</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Quality Eng" data-ar="هندسة الجودة">Quality Eng</h3>
+                            <div class="price">
+                                <span class="currency">LBP</span>
+                                <span class="amount">180,000,000</span>
+                            </div>
+                            <p data-en="QA & compliance" data-ar="ضمان الجودة والامتثال">QA & compliance</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Design Transfer" data-ar="نقل التصميم">Design Transfer</h3>
+                            <div class="price">
+                                <span class="currency">LBP</span>
+                                <span class="amount">270,000,000</span>
+                            </div>
+                            <p data-en="Dev to manufacturing" data-ar="من التطوير إلى التصنيع">Dev to manufacturing</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Technical File" data-ar="الملف التقني">Technical File</h3>
+                            <div class="price">
+                                <span class="currency">LBP</span>
+                                <span class="amount">240,000,000</span>
+                            </div>
+                            <p data-en="Regulatory submissions" data-ar="التقديمات التنظيمية">Regulatory submissions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- US Pricing -->
+                <div class="pricing-content" data-region="us">
+                    <div class="pricing-cards">
+                        <div class="pricing-card">
+                            <h3 data-en="Project Charter" data-ar="ميثاق المشروع">Project Charter</h3>
+                            <div class="price">
+                                <span class="currency">USD</span>
+                                <span class="amount">12,000</span>
+                            </div>
+                            <p data-en="Scope definition & governance" data-ar="تعريف النطاق والحوكمة">Scope definition & governance</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Design & Dev Plan" data-ar="خطة التصميم والتطوير">Design & Dev Plan</h3>
+                            <div class="price">
+                                <span class="currency">USD</span>
+                                <span class="amount">20,000</span>
+                            </div>
+                            <p data-en="Complete development planning" data-ar="التخطيط الشامل للتطوير">Complete development planning</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Design Control" data-ar="التحكم في التصميم">Design Control</h3>
+                            <div class="price">
+                                <span class="currency">USD</span>
+                                <span class="amount">40,000</span>
+                            </div>
+                            <p data-en="Full implementation phases" data-ar="تنفيذ المراحل الكاملة">Full implementation phases</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="R&D Engineering" data-ar="هندسة البحث والتطوير">R&D Engineering</h3>
+                            <div class="price">
+                                <span class="currency">USD</span>
+                                <span class="amount">65,000</span>
+                            </div>
+                            <p data-en="Research & innovation" data-ar="البحث والابتكار">Research & innovation</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Manufacturing Eng" data-ar="هندسة التصنيع">Manufacturing Eng</h3>
+                            <div class="price">
+                                <span class="currency">USD</span>
+                                <span class="amount">55,000</span>
+                            </div>
+                            <p data-en="Process optimization" data-ar="تحسين العملية">Process optimization</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Quality Eng" data-ar="هندسة الجودة">Quality Eng</h3>
+                            <div class="price">
+                                <span class="currency">USD</span>
+                                <span class="amount">32,000</span>
+                            </div>
+                            <p data-en="QA & compliance" data-ar="ضمان الجودة والامتثال">QA & compliance</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Design Transfer" data-ar="نقل التصميم">Design Transfer</h3>
+                            <div class="price">
+                                <span class="currency">USD</span>
+                                <span class="amount">48,000</span>
+                            </div>
+                            <p data-en="Dev to manufacturing" data-ar="من التطوير إلى التصنيع">Dev to manufacturing</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Technical File" data-ar="الملف التقني">Technical File</h3>
+                            <div class="price">
+                                <span class="currency">USD</span>
+                                <span class="amount">42,000</span>
+                            </div>
+                            <p data-en="Regulatory submissions" data-ar="التقديمات التنظيمية">Regulatory submissions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Europe Pricing -->
+                <div class="pricing-content" data-region="europe">
+                    <div class="pricing-cards">
+                        <div class="pricing-card">
+                            <h3 data-en="Project Charter" data-ar="ميثاق المشروع">Project Charter</h3>
+                            <div class="price">
+                                <span class="currency">EUR</span>
+                                <span class="amount">11,000</span>
+                            </div>
+                            <p data-en="Scope definition & governance" data-ar="تعريف النطاق والحوكمة">Scope definition & governance</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Design & Dev Plan" data-ar="خطة التصميم والتطوير">Design & Dev Plan</h3>
+                            <div class="price">
+                                <span class="currency">EUR</span>
+                                <span class="amount">18,500</span>
+                            </div>
+                            <p data-en="Complete development planning" data-ar="التخطيط الشامل للتطوير">Complete development planning</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Design Control" data-ar="التحكم في التصميم">Design Control</h3>
+                            <div class="price">
+                                <span class="currency">EUR</span>
+                                <span class="amount">36,500</span>
+                            </div>
+                            <p data-en="Full implementation phases" data-ar="تنفيذ المراحل الكاملة">Full implementation phases</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="R&D Engineering" data-ar="هندسة البحث والتطوير">R&D Engineering</h3>
+                            <div class="price">
+                                <span class="currency">EUR</span>
+                                <span class="amount">60,000</span>
+                            </div>
+                            <p data-en="Research & innovation" data-ar="البحث والابتكار">Research & innovation</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Manufacturing Eng" data-ar="هندسة التصنيع">Manufacturing Eng</h3>
+                            <div class="price">
+                                <span class="currency">EUR</span>
+                                <span class="amount">50,000</span>
+                            </div>
+                            <p data-en="Process optimization" data-ar="تحسين العملية">Process optimization</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Quality Eng" data-ar="هندسة الجودة">Quality Eng</h3>
+                            <div class="price">
+                                <span class="currency">EUR</span>
+                                <span class="amount">29,000</span>
+                            </div>
+                            <p data-en="QA & compliance" data-ar="ضمان الجودة والامتثال">QA & compliance</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Design Transfer" data-ar="نقل التصميم">Design Transfer</h3>
+                            <div class="price">
+                                <span class="currency">EUR</span>
+                                <span class="amount">44,000</span>
+                            </div>
+                            <p data-en="Dev to manufacturing" data-ar="من التطوير إلى التصنيع">Dev to manufacturing</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3 data-en="Technical File" data-ar="الملف التقني">Technical File</h3>
+                            <div class="price">
+                                <span class="currency">EUR</span>
+                                <span class="amount">38,500</span>
+                            </div>
+                            <p data-en="Regulatory submissions" data-ar="التقديمات التنظيمية">Regulatory submissions</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -133,54 +450,54 @@
     <!-- Expertise Section -->
     <section id="expertise" class="expertise">
         <div class="container">
-            <h2>Areas of Expertise</h2>
+            <h2 data-en="Areas of Expertise" data-ar="مجالات الخبرة">Areas of Expertise</h2>
             <div class="expertise-grid">
                 <div class="expertise-item">
-                    <h3>Device Development Lifecycle</h3>
+                    <h3 data-en="Device Development Lifecycle" data-ar="دورة حياة تطوير الأجهزة">Device Development Lifecycle</h3>
                     <ul>
-                        <li>Concept to commercialization</li>
-                        <li>Design control compliance</li>
-                        <li>Regulatory pathway planning</li>
+                        <li data-en="Concept to commercialization" data-ar="من الفكرة إلى التسويق">Concept to commercialization</li>
+                        <li data-en="Design control compliance" data-ar="الامتثال لمراقبة التصميم">Design control compliance</li>
+                        <li data-en="Regulatory pathway planning" data-ar="تخطيط المسار التنظيمي">Regulatory pathway planning</li>
                     </ul>
                 </div>
                 <div class="expertise-item">
-                    <h3>Regulatory Compliance</h3>
+                    <h3 data-en="Regulatory Compliance" data-ar="الامتثال التنظيمي">Regulatory Compliance</h3>
                     <ul>
-                        <li>FDA, CE Mark, and local regulations</li>
-                        <li>Technical file preparation</li>
-                        <li>Risk management (ISO 14971)</li>
+                        <li data-en="FDA, CE Mark, and local regulations" data-ar="FDA و CE Mark واللوائح المحلية">FDA, CE Mark, and local regulations</li>
+                        <li data-en="Technical file preparation" data-ar="إعداد الملف التقني">Technical file preparation</li>
+                        <li data-en="Risk management (ISO 14971)" data-ar="إدارة المخاطر (ISO 14971)">Risk management (ISO 14971)</li>
                     </ul>
                 </div>
                 <div class="expertise-item">
-                    <h3>Quality Management</h3>
+                    <h3 data-en="Quality Management" data-ar="إدارة الجودة">Quality Management</h3>
                     <ul>
-                        <li>ISO 13485 implementation</li>
-                        <li>Quality systems documentation</li>
-                        <li>CAPA and NCR systems</li>
+                        <li data-en="ISO 13485 implementation" data-ar="تنفيذ ISO 13485">ISO 13485 implementation</li>
+                        <li data-en="Quality systems documentation" data-ar="توثيق أنظمة الجودة">Quality systems documentation</li>
+                        <li data-en="CAPA and NCR systems" data-ar="أنظمة CAPA و NCR">CAPA and NCR systems</li>
                     </ul>
                 </div>
                 <div class="expertise-item">
-                    <h3>Clinical & Usability Testing</h3>
+                    <h3 data-en="Clinical & Usability Testing" data-ar="الاختبار السريري وسهولة الاستخدام">Clinical & Usability Testing</h3>
                     <ul>
-                        <li>Feasibility studies</li>
-                        <li>Summative usability studies</li>
-                        <li>Clinical evidence generation</li>
+                        <li data-en="Feasibility studies" data-ar="دراسات الجدوى">Feasibility studies</li>
+                        <li data-en="Summative usability studies" data-ar="دراسات سهولة الاستخدام الشاملة">Summative usability studies</li>
+                        <li data-en="Clinical evidence generation" data-ar="توليد الأدلة السريرية">Clinical evidence generation</li>
                     </ul>
                 </div>
                 <div class="expertise-item">
-                    <h3>Manufacturing Excellence</h3>
+                    <h3 data-en="Manufacturing Excellence" data-ar="التميز في التصنيع">Manufacturing Excellence</h3>
                     <ul>
-                        <li>Process design and optimization</li>
-                        <li>Scale-up support</li>
-                        <li>Supplier qualification</li>
+                        <li data-en="Process design and optimization" data-ar="تصميم العمليات والتحسين">Process design and optimization</li>
+                        <li data-en="Scale-up support" data-ar="دعم التوسع">Scale-up support</li>
+                        <li data-en="Supplier qualification" data-ar="تأهيل الموردين">Supplier qualification</li>
                     </ul>
                 </div>
                 <div class="expertise-item">
-                    <h3>Post-Launch Support</h3>
+                    <h3 data-en="Post-Launch Support" data-ar="الدعم بعد الإطلاق">Post-Launch Support</h3>
                     <ul>
-                        <li>Market surveillance</li>
-                        <li>Adverse event management</li>
-                        <li>Continuous improvement</li>
+                        <li data-en="Market surveillance" data-ar="المراقبة السوقية">Market surveillance</li>
+                        <li data-en="Adverse event management" data-ar="إدارة الأحداث الضارة">Adverse event management</li>
+                        <li data-en="Continuous improvement" data-ar="التحسين المستمر">Continuous improvement</li>
                     </ul>
                 </div>
             </div>
@@ -190,37 +507,43 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2>Featured Projects</h2>
+            <h2 data-en="Featured Projects" data-ar="المشاريع المميزة">Featured Projects</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <h3>Diagnostic Device Commercialization</h3>
-                    <p class="project-category">Category: Design & Regulatory</p>
-                    <p>Successful development and regulatory approval of innovative diagnostic device for Middle Eastern market</p>
+                    <img src="assets/portfolio-1.jpg" alt="Diagnostic Device">
+                    <h3 data-en="Diagnostic Device Commercialization" data-ar="تسويق الأجهزة التشخيصية">Diagnostic Device Commercialization</h3>
+                    <p class="project-category" data-en="Category: Design & Regulatory" data-ar="الفئة: التصميم والتنظيم">Category: Design & Regulatory</p>
+                    <p data-en="Successful development and regulatory approval of innovative diagnostic device for Middle Eastern market" data-ar="التطوير الناجح والموافقة التنظيمية لجهاز تشخيصي مبتكر للسوق الشرق الأوسطية">Successful development and regulatory approval of innovative diagnostic device for Middle Eastern market</p>
                 </div>
                 <div class="portfolio-item">
-                    <h3>Manufacturing Scale-Up</h3>
-                    <p class="project-category">Category: Manufacturing Engineering</p>
-                    <p>End-to-end manufacturing process optimization for volume production</p>
+                    <img src="assets/portfolio-2.jpg" alt="Manufacturing Scale-Up">
+                    <h3 data-en="Manufacturing Scale-Up" data-ar="توسع التصنيع">Manufacturing Scale-Up</h3>
+                    <p class="project-category" data-en="Category: Manufacturing Engineering" data-ar="الفئة: هندسة التصنيع">Category: Manufacturing Engineering</p>
+                    <p data-en="End-to-end manufacturing process optimization for volume production" data-ar="تحسين عملية التصنيع من البداية إلى النهاية للإنتاج بكميات كبيرة">End-to-end manufacturing process optimization for volume production</p>
                 </div>
                 <div class="portfolio-item">
-                    <h3>Quality System Implementation</h3>
-                    <p class="project-category">Category: Quality Management</p>
-                    <p>ISO 13485 certified quality management system deployment</p>
+                    <img src="assets/portfolio-3.jpg" alt="Quality System">
+                    <h3 data-en="Quality System Implementation" data-ar="تنفيذ نظام الجودة">Quality System Implementation</h3>
+                    <p class="project-category" data-en="Category: Quality Management" data-ar="الفئة: إدارة الجودة">Category: Quality Management</p>
+                    <p data-en="ISO 13485 certified quality management system deployment" data-ar="نشر نظام إدارة جودة معتمد ISO 13485">ISO 13485 certified quality management system deployment</p>
                 </div>
                 <div class="portfolio-item">
-                    <h3>Clinical Trial Support</h3>
-                    <p class="project-category">Category: Clinical Studies</p>
-                    <p>Comprehensive feasibility and summative usability study execution</p>
+                    <img src="assets/portfolio-4.jpg" alt="Clinical Trial">
+                    <h3 data-en="Clinical Trial Support" data-ar="دعم التجارب السريرية">Clinical Trial Support</h3>
+                    <p class="project-category" data-en="Category: Clinical Studies" data-ar="الفئة: الدراسات السريرية">Category: Clinical Studies</p>
+                    <p data-en="Comprehensive feasibility and summative usability study execution" data-ar="تنفيذ شامل لدراسات الجدوى وسهولة الاستخدام">Comprehensive feasibility and summative usability study execution</p>
                 </div>
                 <div class="portfolio-item">
-                    <h3>Regulatory Submissions</h3>
-                    <p class="project-category">Category: Regulatory Affairs</p>
-                    <p>Successful technical file submissions across multiple jurisdictions</p>
+                    <img src="assets/portfolio-5.jpg" alt="Regulatory Submissions">
+                    <h3 data-en="Regulatory Submissions" data-ar="التقديمات التنظيمية">Regulatory Submissions</h3>
+                    <p class="project-category" data-en="Category: Regulatory Affairs" data-ar="الفئة: الشؤون التنظيمية">Category: Regulatory Affairs</p>
+                    <p data-en="Successful technical file submissions across multiple jurisdictions" data-ar="تقديمات ملفات تقنية ناجحة عبر عدة اختصاصات">Successful technical file submissions across multiple jurisdictions</p>
                 </div>
                 <div class="portfolio-item">
-                    <h3>Post-Market Surveillance Program</h3>
-                    <p class="project-category">Category: Post-Launch</p>
-                    <p>Established comprehensive adverse event monitoring and CAPA systems</p>
+                    <img src="assets/portfolio-6.jpg" alt="Post-Market Surveillance">
+                    <h3 data-en="Post-Market Surveillance Program" data-ar="برنامج المراقبة بعد التسويق">Post-Market Surveillance Program</h3>
+                    <p class="project-category" data-en="Category: Post-Launch" data-ar="الفئة: ما بعد الإطلاق">Category: Post-Launch</p>
+                    <p data-en="Established comprehensive adverse event monitoring and CAPA systems" data-ar="إنشاء أنظمة شاملة لمراقبة الأحداث الضارة و CAPA">Established comprehensive adverse event monitoring and CAPA systems</p>
                 </div>
             </div>
         </div>
@@ -229,15 +552,23 @@
     <!-- Regional Focus Section -->
     <section id="regional" class="regional">
         <div class="container">
-            <h2>Regional Focus: Gulf & Lebanon</h2>
+            <h2 data-en="Regional Focus" data-ar="التركيز الإقليمي">Regional Focus</h2>
             <div class="regional-content">
                 <div class="region-card">
-                    <h3>Gulf Cooperation Council</h3>
-                    <p>Expertise in regulatory requirements for Saudi Arabia, UAE, Qatar, Kuwait, Bahrain, and Oman. Understanding of local market dynamics and healthcare systems.</p>
+                    <h3 data-en="Gulf Cooperation Council" data-ar="مجلس التعاون الخليجي">Gulf Cooperation Council</h3>
+                    <p data-en="Expertise in regulatory requirements for Saudi Arabia, UAE, Qatar, Kuwait, Bahrain, and Oman. Understanding of local market dynamics and healthcare systems." data-ar="خبرة في المتطلبات التنظيمية للمملكة العربية السعودية والإمارات وقطر والكويت والبحرين وعمان. فهم ديناميات السوق المحلية والأنظمة الصحية.">Expertise in regulatory requirements for Saudi Arabia, UAE, Qatar, Kuwait, Bahrain, and Oman. Understanding of local market dynamics and healthcare systems.</p>
                 </div>
                 <div class="region-card">
-                    <h3>Lebanon Market</h3>
-                    <p>Deep knowledge of Lebanese regulatory landscape and healthcare sector. Local connections and regulatory expertise for successful market entry.</p>
+                    <h3 data-en="Lebanon Market" data-ar="السوق اللبنانية">Lebanon Market</h3>
+                    <p data-en="Deep knowledge of Lebanese regulatory landscape and healthcare sector. Local connections and regulatory expertise for successful market entry." data-ar="معرفة عميقة بالمشهد التنظيمي اللبناني وقطاع الرعاية الصحية. الاتصالات المحلية والخبرة التنظيمية للدخول الناجح إلى السوق.">Deep knowledge of Lebanese regulatory landscape and healthcare sector. Local connections and regulatory expertise for successful market entry.</p>
+                </div>
+                <div class="region-card">
+                    <h3 data-en="United States Market" data-ar="السوق الأمريكية">United States Market</h3>
+                    <p data-en="FDA expertise and extensive experience with US regulatory pathways. Support for clinical trials, IDE submissions, and 510(k) clearances." data-ar="خبرة FDA وتجربة واسعة مع المسارات التنظيمية الأمريكية. الدعم في التجارب السريرية وتقديمات IDE وموافقات 510(k).">FDA expertise and extensive experience with US regulatory pathways. Support for clinical trials, IDE submissions, and 510(k) clearances.</p>
+                </div>
+                <div class="region-card">
+                    <h3 data-en="European Market" data-ar="السوق الأوروبية">European Market</h3>
+                    <p data-en="CE Mark expertise and MDR/IVDR compliance. Experience with notified body coordination and European regulatory requirements across multiple member states." data-ar="خبرة CE Mark والامتثال لـ MDR/IVDR. تجربة مع تنسيق الهيئات المعترف بها والمتطلبات التنظيمية الأوروبية عبر دول أعضاء متعددة.">CE Mark expertise and MDR/IVDR compliance. Experience with notified body coordination and European regulatory requirements across multiple member states.</p>
                 </div>
             </div>
         </div>
@@ -246,40 +577,40 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Get in Touch</h2>
+            <h2 data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Contact Information</h3>
+                    <h3 data-en="Contact Information" data-ar="معلومات الاتصال">Contact Information</h3>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
                         <div>
-                            <p><strong>WhatsApp</strong></p>
+                            <p><strong data-en="WhatsApp" data-ar="واتس اب">WhatsApp</strong></p>
                             <p><a href="https://wa.me/15084104492">+1 508 410 4492</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
-                            <p><strong>Email</strong></p>
+                            <p><strong data-en="Email" data-ar="البريد الإلكتروني">Email</strong></p>
                             <p><a href="mailto:services@mena-medtech.com">services@mena-medtech.com</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-globe"></i>
                         <div>
-                            <p><strong>Service Region</strong></p>
-                            <p>Gulf Region & Lebanon</p>
+                            <p><strong data-en="Service Regions" data-ar="مناطق الخدمة">Service Regions</strong></p>
+                            <p data-en="Gulf Region, Lebanon, US & Europe" data-ar="منطقة الخليج ولبنان والولايات المتحدة وأوروبا">Gulf Region, Lebanon, US & Europe</p>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <h3>Send us a Message</h3>
+                    <h3 data-en="Send us a Message" data-ar="أرسل لنا رسالة">Send us a Message</h3>
                     <form id="contactForm">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <input type="text" placeholder="Subject" required>
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                        <button type="submit" class="submit-btn">Send Message</button>
+                        <input type="text" placeholder="Your Name / اسمك" required>
+                        <input type="email" placeholder="Your Email / بريدك الإلكتروني" required>
+                        <input type="text" placeholder="Subject / الموضوع" required>
+                        <textarea placeholder="Your Message / رسالتك" rows="5" required></textarea>
+                        <button type="submit" class="submit-btn" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -289,8 +620,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 MENA MedTech. All rights reserved.</p>
-            <p>Medical Device Engineering & Regulatory Excellence | Serving the Gulf & Lebanon</p>
+            <p>&copy; 2024 MENA MedTech. <span data-en="All rights reserved" data-ar="جميع الحقوق محفوظة">All rights reserved</span>.</p>
+            <p data-en="Medical Device Engineering & Regulatory Excellence | Serving Gulf, Lebanon, US & Europe" data-ar="هندسة الأجهزة الطبية والتميز التنظيمي | خدمة الخليج ولبنان والولايات المتحدة وأوروبا">Medical Device Engineering & Regulatory Excellence | Serving Gulf, Lebanon, US & Europe</p>
         </div>
     </footer>
 
