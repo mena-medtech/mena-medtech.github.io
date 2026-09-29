@@ -1110,6 +1110,7 @@ body {
 
 /* ========== Responsive Design ========== */
 @media (max-width: 768px) {
+    /* Stack switcher below nav-brand (order 1) and nav-menu (order 2) */
     .language-switcher {
         order: 3;
         width: 100%;
