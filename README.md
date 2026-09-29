@@ -14,6 +14,16 @@ MENA MedTech is a specialized consulting firm with **15+ years of expertise** in
 - **Risk Management** - ISO 14971 compliance and documentation
 - **DHF Remediation** - Design History File recovery and improvement
 
+## 🏢 Company Profile
+
+The homepage includes a **Company Profile** section (`#company`) stating that:
+
+- MENA MedTech is a legally registered Limited Liability Company (LLC) in the United States.
+- Ahmad Ali Krayem is the CEO and owner of MENA MedTech.
+- MENA MedTech maintains a network of 20 qualified resources available to support client projects.
+
+These statements are presented as general business representations. No registration numbers, state of formation, banking details, or other unsupported specifics are included.
+
 ## 🌍 Service Regions
 
 - **Gulf Cooperation Council (GCC)** - Saudi Arabia, UAE, Qatar, Kuwait, Bahrain, Oman
@@ -27,6 +37,23 @@ MENA MedTech is a specialized consulting firm with **15+ years of expertise** in
 - 100+ projects completed
 - 50+ medical devices commercialized
 - Multi-regulatory expertise (FDA, CE Mark, regional bodies)
+
+## 💳 Payment Section
+
+The homepage includes a **Pay for Services** navigation tab and a payment section (`#payment`) that explains how clients can pay for consulting services:
+
+- **Card payments** — Visa, Mastercard, and American Express, processed through a secure, hosted third-party payment provider (Stripe-ready).
+- **Bank payment / direct deposit (ACH)** — available once enabled in the payment provider's dashboard.
+
+**Important:** This static site does **not** collect or store card numbers, bank account numbers, routing numbers, or any other sensitive financial data. All payment processing is intended to be handled entirely by a secure, PCI-compliant provider such as Stripe using hosted Checkout or Payment Links.
+
+### Configuring the payment provider
+
+The payment buttons currently fall back to a `mailto:` contact link because no live provider account/links were supplied. To enable real payments:
+
+1. Create Payment Links (or Checkout Sessions) in your payment provider's dashboard (e.g., Stripe) for card payments, and enable ACH/direct deposit for bank payments.
+2. Open `script.js` and set the `PAYMENT_LINKS.card` and `PAYMENT_LINKS.bank` values to the hosted URLs provided by your payment provider.
+3. Once set, the "Pay with Card" and "Request Bank Payment" buttons will automatically open the provider's secure hosted payment page in a new tab instead of the contact email fallback.
 
 ## 🛠️ Technical Stack
 
@@ -55,6 +82,7 @@ mena-medtech.github.io/
 - **Service Cards** - Detailed service descriptions
 - **Portfolio Section** - Featured project categories
 - **Regional Focus** - Market-specific information
+- **Payment Options** - Card and bank/direct-deposit payment CTAs (Stripe-ready)
 - **Animations** - Smooth transitions and scroll effects
 
 ## 🎨 Customization
