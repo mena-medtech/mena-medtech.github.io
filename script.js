@@ -1,4 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Payment provider configuration (Stripe-ready).
+  // Replace these empty placeholders with real hosted Checkout / Payment Link
+  // URLs from your payment provider (e.g. Stripe Payment Links) once your
+  // account is set up. Enable ACH/direct-deposit in the provider's dashboard
+  // for the "bank" link. Until these are configured, the payment buttons
+  // fall back to a safe "contact us" email so no broken or fabricated
+  // payment URL is ever shown to visitors.
+  const PAYMENT_LINKS = {
+    card: '', // e.g. 'https://buy.stripe.com/xxxxxxxxxxxx'
+    bank: '', // e.g. 'https://buy.stripe.com/yyyyyyyyyyyy' (with ACH/direct deposit enabled)
+  };
+
+  document.querySelectorAll('.payment-cta').forEach((link) => {
+    const configuredUrl = PAYMENT_LINKS[link.dataset.paymentType];
+    if (configuredUrl) {
+      link.href = configuredUrl;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+    }
+  });
+
   const setLanguage = (language) => {
     document.documentElement.lang = language;
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
