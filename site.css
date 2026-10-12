@@ -53,3 +53,9 @@
 .tool-link-list a{color:var(--blue);font-weight:650;text-decoration:none}
 .tool-link-list a:hover{text-decoration:underline}
 @media(max-width:720px){.tool-glossary-grid{grid-template-columns:1fr}}
+
+/* Make About-page tool chips unmistakably clickable */
+.tool-chips .tool-chip-link{cursor:pointer;position:relative;gap:7px;transition:background .18s,border-color .18s,transform .18s;}
+.tool-chips .tool-chip-link:after{content:"↗";font-size:.82em;font-weight:900;line-height:1;}
+.tool-chips .tool-chip-link:hover{background:#e8f3ff;border-color:#8bb9e8;text-decoration:underline;transform:translateY(-1px);}
+.tool-chips .tool-chip-link:focus-visible{outline:3px solid #f2a541;outline-offset:3px;}
