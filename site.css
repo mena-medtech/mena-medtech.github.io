@@ -44,3 +44,12 @@
 .hero-photo-fallback .hero-photo-caption{position:relative;inset:auto}
 @media(max-width:1020px){.hero-grid{grid-template-columns:1fr .95fr;gap:24px}.hero h1{font-size:clamp(1.75rem,3.4vw,2.5rem)}.hero-photo{height:clamp(320px,40vw,400px)}}
 @media(max-width:720px){.hero-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(1.65rem,6vw,2.15rem)}.hero p{font-size:.98rem}.hero-photo{height:clamp(300px,78vw,390px)}.hero-photo-caption{padding:18px 20px}.hero-photo-caption strong{font-size:1.02rem}.hero-photo-caption span{font-size:.94rem}}
+
+/* Linked tool glossary and clickable expertise chips */
+.tool-chips .tool-chip-link{display:inline-flex;align-items:center;border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 14px;font-size:.9rem;font-weight:700;color:var(--blue);text-decoration:none;box-shadow:0 4px 12px rgba(11,35,66,.04)}
+.tool-chips .tool-chip-link:hover{background:#edf5ff;text-decoration:underline}
+.tool-glossary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.tool-link-list{padding-left:20px;margin:0;display:grid;gap:9px}
+.tool-link-list a{color:var(--blue);font-weight:650;text-decoration:none}
+.tool-link-list a:hover{text-decoration:underline}
+@media(max-width:720px){.tool-glossary-grid{grid-template-columns:1fr}}
