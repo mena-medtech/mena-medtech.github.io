@@ -59,3 +59,14 @@
 .tool-chips .tool-chip-link:after{content:"↗";font-size:.82em;font-weight:900;line-height:1;}
 .tool-chips .tool-chip-link:hover{background:#e8f3ff;border-color:#8bb9e8;text-decoration:underline;transform:translateY(-1px);}
 .tool-chips .tool-chip-link:focus-visible{outline:3px solid #f2a541;outline-offset:3px;}
+
+/* Explicit tool descriptions and company/product portfolio links on About page */
+.tool-detail-grid,.company-link-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.tool-detail-card,.company-link-card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:20px;box-shadow:var(--shadow);min-width:0}
+.tool-detail-card h3,.company-link-card h3{font-size:1rem;margin:0 0 9px;line-height:1.45}
+.tool-detail-card h3 a,.company-link-card h3 a{color:var(--blue);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;overflow-wrap:anywhere}
+.tool-detail-card p{color:var(--muted);font-size:.93rem;margin:0 0 13px}
+.tool-official-link,.company-link-actions a{display:inline-flex;align-items:center;gap:5px;color:var(--blue);font-weight:750;text-decoration:underline;text-underline-offset:3px;font-size:.9rem}
+.company-link-actions{display:flex;gap:14px;flex-wrap:wrap}
+.tool-detail-card a:focus-visible,.company-link-card a:focus-visible{outline:3px solid #f2a541;outline-offset:3px}
+@media(max-width:720px){.tool-detail-grid,.company-link-grid{grid-template-columns:1fr}}
