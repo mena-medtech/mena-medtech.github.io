@@ -26,3 +26,5 @@
 .contact-box .btn-row .btn{font-size:.9rem;padding:10px 12px}
 @media(max-width:1020px){.hero-grid{grid-template-columns:1fr 0.8fr;gap:26px}.page-hero-grid{grid-template-columns:1fr .65fr}}
 @media(max-width:720px){.hero-grid,.page-hero-grid{grid-template-columns:1fr}.hero-photo-wrap{min-height:240px}.hero-photo{height:260px}.page-hero-image{height:190px}.editorial-image{height:200px}}
+
+.hero-photo-fallback{background:linear-gradient(145deg,#0b2342,#145da0 55%,#0f8b8d);display:flex;align-items:flex-end;min-height:360px}.hero-photo-fallback:before{content:"MENA MEDTECH";display:block;color:#fff;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:800;letter-spacing:.08em;padding:32px;align-self:center}.hero-photo-fallback .hero-photo-caption{position:relative;background:linear-gradient(transparent,rgba(4,20,39,.55))}@media(max-width:720px){.hero-photo-fallback{min-height:240px}}
