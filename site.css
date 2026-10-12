@@ -28,3 +28,17 @@
 @media(max-width:720px){.hero-grid,.page-hero-grid{grid-template-columns:1fr}.hero-photo-wrap{min-height:240px}.hero-photo{height:260px}.page-hero-image{height:190px}.editorial-image{height:200px}}
 
 .hero-photo-fallback{background:linear-gradient(145deg,#0b2342,#145da0 55%,#0f8b8d);display:flex;align-items:flex-end;min-height:360px}.hero-photo-fallback:before{content:"MENA MEDTECH";display:block;color:#fff;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:800;letter-spacing:.08em;padding:32px;align-self:center}.hero-photo-fallback .hero-photo-caption{position:relative;background:linear-gradient(transparent,rgba(4,20,39,.55))}@media(max-width:720px){.hero-photo-fallback{min-height:240px}}
+
+/* Homepage readability and responsive text fixes */
+.hero h1{font-size:clamp(2rem,3.6vw,3.35rem);line-height:1.16;max-width:720px;overflow-wrap:normal}
+.hero p{font-size:1rem;line-height:1.7;max-width:650px}
+.hero-photo-wrap{display:flex;flex-direction:column;align-self:stretch;min-height:0;overflow:hidden}
+.hero-photo{width:100%;height:clamp(250px,31vw,350px);flex:0 0 auto;object-fit:cover}
+.hero-photo-caption{position:relative;inset:auto;padding:18px 20px;background:var(--navy);background-image:linear-gradient(120deg,#0b2342,#145da0);gap:6px;min-height:88px;overflow-wrap:anywhere}
+.hero-photo-caption strong{font-size:.96rem;line-height:1.4;display:block}
+.hero-photo-caption span{font-size:.86rem;line-height:1.5;display:block;color:#e4edf6}
+.hero-photo-fallback{min-height:0}
+.hero-photo-fallback:before{padding:26px 24px;line-height:1.2}
+.hero-photo-fallback .hero-photo-caption{position:relative;inset:auto}
+@media(max-width:1020px){.hero h1{font-size:clamp(1.95rem,4.2vw,3rem)}.hero-photo{height:300px}}
+@media(max-width:720px){.hero h1{font-size:clamp(1.9rem,7vw,2.55rem)}.hero p{font-size:.98rem}.hero-photo{height:260px}.hero-photo-caption{padding:16px 18px}}
