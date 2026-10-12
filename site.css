@@ -70,3 +70,14 @@
 .company-link-actions{display:flex;gap:14px;flex-wrap:wrap}
 .tool-detail-card a:focus-visible,.company-link-card a:focus-visible{outline:3px solid #f2a541;outline-offset:3px}
 @media(max-width:720px){.tool-detail-grid,.company-link-grid{grid-template-columns:1fr}}
+
+/* Saudi healthcare projects and medical-device analytics section */
+.ksa-project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:16px}
+.ksa-project-card,.ksa-analytics-card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:22px;box-shadow:var(--shadow);min-width:0}
+.ksa-project-card h3,.ksa-analytics-card h3{font-size:1.08rem;line-height:1.45;margin:0 0 10px}
+.ksa-project-card h3 a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+.ksa-project-card p,.ksa-analytics-card p{color:var(--muted);margin:0 0 14px}
+.ksa-city-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.ksa-city-list span{display:inline-flex;padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:#f5f8fc;font-size:.88rem;font-weight:700}
+.ksa-analytics-card{border-left:4px solid var(--blue)}
+@media(max-width:720px){.ksa-project-grid{grid-template-columns:1fr}}
